@@ -4,8 +4,8 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-const release = "release-deom@1.0.0";
-const environment = "staging";
+export const release = "release-deom@1.0.0";
+export const environment = "staging";
 
 // paste your sentry configuration here...
 Sentry.init({
