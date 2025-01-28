@@ -16,6 +16,9 @@ export default defineConfig({
       },
       create: true,
       finalize: true,
+      setCommits: {
+        auto: true,
+      },
     },
     // authToken: process.env.SENTRY_AUTH_TOKEN
     authToken: "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",
