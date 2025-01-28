@@ -37,12 +37,16 @@ function App() {
   }
 
   const generateAPIError2 = async () => {
-    const response = await fetch("https://dog.ceo/api/breeds/image/randomee");
-    const json = await response.json();
-    console.log(json)
-    setState({
-      dogImgUrl: json?.message,
-    })
+    try {
+      const response = await fetch("https://dog.ceo/api/breeds/image/randomee");
+      const json = await response.json();
+      console.log(json)
+      setState({
+        dogImgUrl: json?.message,
+      })
+    } catch (error) {
+      throw new Error(error);
+    }
   }
 
   return (
